@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class OperationConroller {
     @GetMapping("/calc")
-    public SubEntity getCalc( @RequestParam(value = "command", defaultValue = "no command") String command,@RequestParam(value = "a",defaultValue = "0") String a, @RequestParam(value = "b",defaultValue = "0") String b) {
+    public Result getCalc( @RequestParam(value = "command", defaultValue = "no command") String command,@RequestParam(value = "a",defaultValue = "0") String a, @RequestParam(value = "b",defaultValue = "0") String b) {
         int result = Calculate.calculateParameter(command, a, b);
-        return new SubEntity(command, a, b, result);
+        return new Result(command, a, b, result);
     }
 
 }
