@@ -2,11 +2,11 @@ package service.simpleservice;
 
 public class Result {
     private final String command;
-    private final String a;
-    private final String b;
-    private final int result;
+    private final Double a;
+    private final Double b;
+    private final Double result;
 
-    public Result(String command, String a, String b, int result){
+    public Result(String command, Double a, Double b, Double result){
         this.command = command;
         this.a = a;
         this.b = b;
@@ -19,15 +19,15 @@ public class Result {
     }
 
 
-    public String getCmd() {
+    public Double getCmd() {
         return a;
     }
 
-    public String getCmd1() {
+    public Double getCmd1() {
         return b;
     }
 
-    public int getResult() {
+    public Double getResult() {
         return result;
     }
 }
